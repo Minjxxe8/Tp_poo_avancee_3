@@ -1,0 +1,22 @@
+package Singleton;
+
+public class Main {
+
+    public static void main(String[] args) {
+        TPE tpe = TPE.getInstance();
+        tpe.ajouterPaiement(5.0);
+        System.out.println("Solde : " + tpe.getSolde());
+
+        TPE tpe2 = TPE.getInstance();
+        tpe2.ajouterPaiement(20.0);
+        System.out.println("Solde : " + tpe.getSolde());
+
+        TPE tpe3 = TPE.getInstance();
+        System.out.println("Solde : " + tpe3.getSolde());
+
+        TPE tpe4 = TPE.getInstance();
+        tpe4.resetSolde();
+        System.out.println("Solde : " + tpe.getSolde());
+    }
+
+}
